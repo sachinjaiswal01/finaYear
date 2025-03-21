@@ -1,0 +1,203 @@
+@keyframes bodyGlow {
+  0% {
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+  }
+}
+
+body {
+  margin: 20px;
+  background-color: #0f0c0e; /* Dark background color */
+  color: #e0e0e0; /* Light text color for good contrast */
+  animation: bodyGlow 3s infinite ease-in-out; /* Glowing animation */
+  border-radius: 10px; /* Rounded edges for a smoother look */
+  border-color: #e0e0e0; /* Border color */
+}
+
+.App {
+  text-align: center;
+  margin: 20px;
+  background-color: #2b2a2e; /* Velvet-like dark background */
+  color: #f5f5f5; /* Rich, off-white text color for contrast */
+  font-family: 'Arial', sans-serif;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-selector {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  gap: 15px;
+}
+
+.language-selector select {
+  background-color: #2b2a2e; /* Velvet dark background */
+  color: #ffffff; /* Bright white for visibility */
+  border: 1px solid #555; /* Deep gray border for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-selector select:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+.image-upload {
+  margin: 20px;
+  color: #ffffff; /* Bright white for visibility */
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.image-upload:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    border-color: #555;
+  }
+  50% {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.8);
+    border-color: #ffffff;
+  }
+  100% {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    border-color: #555;
+  }
+}
+
+.drag-drop {
+  border: 2px dashed #555;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  color: #f5f5f5; /* Off-white text color for contrast */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: glow 3s infinite ease-in-out;
+}
+
+.translation-block {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.translation-block:hover {
+  transform: translateY(-5px);
+}
+
+.extracted-text, .translated-text {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #ffffff; /* Bright white for visibility */
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extracted-text:hover, .translated-text:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.button {
+  background-color: #2b2a2e; /* Velvet dark background */
+  color: #ffffff; /* Bright white for visibility */
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid #555; /* Deep gray border */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #3a383d; /* Slightly lighter velvet-like tone on hover */
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f5f5f5; /* Light color for visibility on dark backgrounds */
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+h1:hover {
+  color: #e0e0e0; /* Velvet-like tone with high contrast */
+  transform: translateY(-5px);
+}
+
+h1::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50px;
+  background-color: #555566; /* Accent color for underline */
+  margin: 10px auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+h1:hover::before {
+  opacity: 1;
+  width: 100px;
+}
+
+label::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50px;
+  background-color: #555566; /* Accent color for underline */
+  margin: 10px auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+label:hover::before {
+  opacity: 1;
+  width: 100px;
+}
+
+input::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50px;
+  background-color: #555566; /* Accent color for underline */
+  margin: 10px auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+input:hover::before {
+  opacity: 1;
+  width: 100px;
+}
